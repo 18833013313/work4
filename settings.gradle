@@ -1,0 +1,1 @@
+include ':app', ':lx_zk1_mn1', ':lx_zk1_mn2', ':lx_zk1_mn3', ':lx_zk1_mn4'
