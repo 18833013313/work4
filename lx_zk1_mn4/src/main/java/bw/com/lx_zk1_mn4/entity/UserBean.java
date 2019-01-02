@@ -10,47 +10,47 @@ public class UserBean {
     private String page;
     private List<DataBean> data;
 
-    public String getMsg() {
-        return msg;
-    }
+                public String getMsg() {
+                    return msg;
+                }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
+                public void setMsg(String msg) {
+                    this.msg = msg;
+                }
 
-    public String getCode() {
-        return code;
-    }
+                public String getCode() {
+                    return code;
+                }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+                public void setCode(String code) {
+                    this.code = code;
+                }
 
-    public String getPage() {
-        return page;
-    }
+                public String getPage() {
+                    return page;
+                }
 
-    public void setPage(String page) {
-        this.page = page;
-    }
+                public void setPage(String page) {
+                    this.page = page;
+                }
 
-    public List<DataBean> getData() {
-        return data;
-    }
+                public List<DataBean> getData() {
+                    return data;
+                }
 
-    public void setData(List<DataBean> data) {
-        this.data = data;
-    }
+                public void setData(List<DataBean> data) {
+                    this.data = data;
+                }
 
-    public static class DataBean {
+                public static class DataBean {
 
 
-        private double bargainPrice;
-        private String createtime;
-        private String detailUrl;
-        private String images;
-        private int itemtype;
-        private int pid;
+                    private double bargainPrice;
+                    private String createtime;
+                    private String detailUrl;
+                    private String images;
+                    private int itemtype;
+                    private int pid;
         private double price;
         private int pscid;
         private int salenum;
