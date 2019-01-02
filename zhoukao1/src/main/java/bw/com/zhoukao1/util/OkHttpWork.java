@@ -23,8 +23,10 @@ public class OkHttpWork {
     Handler handler = new Handler();
 
     public OkHttpWork() {
+        //拦截
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(httpLoggingInterceptor.getLevel());
+        //okhttp网络请求
         okHttpClient = new OkHttpClient
                 .Builder()
                 .addInterceptor(httpLoggingInterceptor)

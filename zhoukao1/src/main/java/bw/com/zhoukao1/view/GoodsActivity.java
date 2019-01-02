@@ -27,7 +27,7 @@ public class GoodsActivity extends AppCompatActivity {
     private String api;
     private List<UserBean.DataBean.BannerBean> list;
     private MAdapter mAdapter;
-    private int code = 1;
+    private int page = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +39,9 @@ public class GoodsActivity extends AppCompatActivity {
 
     private void initData() {
         HashMap<String,String> params = new HashMap<>();
-        params.put("code",code+"");
-
-        OkHttpWork.getInstanct().post(api, params, new OkhttpCallBack() {
+        params.put("tuijian","tuijian");
+        params.put("page",page+"");
+        OkHttpWork.getInstanct().post(api, params,new OkhttpCallBack() {
             @Override
             public void onFile(String msg) {
                 Toast.makeText(GoodsActivity.this,"请求失败",Toast.LENGTH_SHORT).show();
@@ -65,8 +65,8 @@ public class GoodsActivity extends AppCompatActivity {
     }
     private void streamString(String result) {
         UserBean userBean = new Gson().fromJson(result, UserBean.class);
-        mAdapter = new MAdapter(this,list);
+        mAdapter = new MAdapter(this,userBean.getData().getTuijian().getList());
         relativ.setAdapter(mAdapter);
-        mAdapter.setList(list);
+
     }
 }

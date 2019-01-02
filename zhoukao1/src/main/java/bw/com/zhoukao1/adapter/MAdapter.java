@@ -20,14 +20,15 @@ import bw.com.zhoukao1.entivity.UserBean;
 
 public class MAdapter extends RecyclerView.Adapter<MAdapter.ViewHolder>{
     private Context context;
-    private List<UserBean.DataBean.BannerBean> list;
+    private List<UserBean.DataBean.TuijianBean.ListBeanX> list;
 
-    public MAdapter(Context context, List<UserBean.DataBean.BannerBean> list) {
+    public MAdapter(Context context, List<UserBean.DataBean.TuijianBean.ListBeanX> list) {
+
         this.context = context;
         this.list = list;
     }
 
-    public void setList(List<UserBean.DataBean.BannerBean> list) {
+    public void setList(List<UserBean.DataBean.TuijianBean.ListBeanX> list) {
         this.list = list;
     }
 
@@ -45,7 +46,7 @@ public class MAdapter extends RecyclerView.Adapter<MAdapter.ViewHolder>{
         String string = ImageLoaderConfiguration.createDefault(context).toString();
         ImageLoaderConfiguration build = new ImageLoaderConfiguration.Builder(context).build();
         ImageLoader.getInstance().init(build);
-        ImageLoader.getInstance().displayImage(list.get(i).getUrl(),viewHolder.image);
+        ImageLoader.getInstance().displayImage(list.get(i).getImages(),viewHolder.image);
 
     }
 
